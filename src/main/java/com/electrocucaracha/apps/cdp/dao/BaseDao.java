@@ -12,10 +12,14 @@ import com.electrocucaracha.apps.cdp.entities.BaseDbObject;
 public abstract class BaseDao<T extends BaseDbObject> {
 
 	private Class<T> typeOfT;
-
+	
 	@SuppressWarnings("unchecked")
 	public BaseDao() {
 		typeOfT = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+	
+	public Class<T> getTypeOfT(){
+		return typeOfT;
 	}
 
 	public long create(T model) {

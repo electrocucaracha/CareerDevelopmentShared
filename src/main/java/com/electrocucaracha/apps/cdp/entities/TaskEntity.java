@@ -7,7 +7,7 @@ import javax.persistence.Table;
 @Table(name = "tasks")
 public class TaskEntity extends BaseDbObject {
 
-	private String task;
+	private String title;
 	private String resource;
 	private double progress;
 	private double price;
@@ -19,19 +19,19 @@ public class TaskEntity extends BaseDbObject {
 
 	public TaskEntity(String task, String resource, double progress, double price, String comments) {
 		super();
-		this.task = task;
+		this.title = task;
 		this.resource = resource;
 		this.progress = progress;
 		this.price = price;
 		this.comments = comments;
 	}
 
-	public String getTask() {
-		return task;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTask(String task) {
-		this.task = task;
+	public void setTitle(String task) {
+		this.title = task;
 	}
 
 	public String getResource() {
@@ -77,7 +77,7 @@ public class TaskEntity extends BaseDbObject {
 		temp = Double.doubleToLongBits(progress);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((resource == null) ? 0 : resource.hashCode());
-		result = prime * result + ((task == null) ? 0 : task.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
 
@@ -104,10 +104,10 @@ public class TaskEntity extends BaseDbObject {
 				return false;
 		} else if (!resource.equals(other.resource))
 			return false;
-		if (task == null) {
-			if (other.task != null)
+		if (title == null) {
+			if (other.title != null)
 				return false;
-		} else if (!task.equals(other.task))
+		} else if (!title.equals(other.title))
 			return false;
 		return true;
 	}

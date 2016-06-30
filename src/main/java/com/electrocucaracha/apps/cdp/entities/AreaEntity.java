@@ -7,7 +7,7 @@ import javax.persistence.Table;
 @Table(name = "areas")
 public class AreaEntity extends BaseDbObject {
 
-	private String area;
+	private String title;
 
 	public AreaEntity() {
 
@@ -15,22 +15,22 @@ public class AreaEntity extends BaseDbObject {
 
 	public AreaEntity(String area) {
 		super();
-		this.area = area;
+		this.title = area;
 	}
 
-	public String getArea() {
-		return area;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setArea(String area) {
-		this.area = area;
+	public void setTitle(String area) {
+		this.title = area;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((area == null) ? 0 : area.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
 
@@ -43,10 +43,10 @@ public class AreaEntity extends BaseDbObject {
 		if (getClass() != obj.getClass())
 			return false;
 		AreaEntity other = (AreaEntity) obj;
-		if (area == null) {
-			if (other.area != null)
+		if (title == null) {
+			if (other.title != null)
 				return false;
-		} else if (!area.equals(other.area))
+		} else if (!title.equals(other.title))
 			return false;
 		return true;
 	}

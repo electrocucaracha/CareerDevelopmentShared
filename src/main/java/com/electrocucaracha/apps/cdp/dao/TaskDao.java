@@ -5,6 +5,9 @@ import java.util.List;
 import com.electrocucaracha.apps.cdp.entities.TaskEntity;
 
 public interface TaskDao {
+
+	TaskEntity getTaskByTitle(String title);
+
 	long create(TaskEntity model);
 
 	List<TaskEntity> retrieve();

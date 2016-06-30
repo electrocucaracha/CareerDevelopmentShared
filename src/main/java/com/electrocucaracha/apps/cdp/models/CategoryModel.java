@@ -8,6 +8,9 @@ public class CategoryModel {
 	private CategoryEntity entity;
 
 	public CategoryModel(CategoryEntity entity) {
+		if(entity == null){
+			throw new IllegalArgumentException("Category entity model cannot be null");
+		}
 		this.entity = entity;
 	}
 	

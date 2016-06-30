@@ -13,5 +13,8 @@
 		<mapping class="com.electrocucaracha.apps.cdp.entities.CategoryEntity" />
 		<mapping class="com.electrocucaracha.apps.cdp.entities.AreaEntity" />
 		<mapping class="com.electrocucaracha.apps.cdp.entities.TaskEntity" />
+
+		<!-- Testing -->
+		<mapping class="com.electrocucaracha.apps.cdp.entities.MockEntity" />
 	</session-factory>
 </hibernate-configuration>
