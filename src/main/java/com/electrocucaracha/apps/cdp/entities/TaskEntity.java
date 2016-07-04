@@ -13,19 +13,6 @@ public class TaskEntity extends BaseDbObject {
 	private double price;
 	private String comments;
 
-	public TaskEntity() {
-
-	}
-
-	public TaskEntity(String task, String resource, double progress, double price, String comments) {
-		super();
-		this.title = task;
-		this.resource = resource;
-		this.progress = progress;
-		this.price = price;
-		this.comments = comments;
-	}
-
 	public String getTitle() {
 		return title;
 	}

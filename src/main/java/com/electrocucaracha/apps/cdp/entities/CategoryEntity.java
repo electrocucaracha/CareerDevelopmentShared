@@ -16,17 +16,6 @@ public class CategoryEntity extends BaseDbObject {
 	private String comments;
 	private AreaEntity[] areas;
 
-	public CategoryEntity() {
-	}
-
-	public CategoryEntity(String title, String definition, double budget, double time) {
-		super();
-		this.title = title;
-		this.definition = definition;
-		this.budget = budget;
-		this.time = time;
-	}
-
 	public String getTitle() {
 		return title;
 	}

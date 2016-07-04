@@ -9,15 +9,6 @@ public class AreaEntity extends BaseDbObject {
 
 	private String title;
 
-	public AreaEntity() {
-
-	}
-
-	public AreaEntity(String area) {
-		super();
-		this.title = area;
-	}
-
 	public String getTitle() {
 		return title;
 	}
