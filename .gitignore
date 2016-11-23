@@ -5,3 +5,4 @@
 .metadata/
 bin/
 build/
+.DS_Store
